@@ -1,0 +1,12 @@
+economy: "economyapi"
+
+message:
+  sell: "Vous venez de vendre x{count} {item} pour ${amount}."
+  not_numeric: "Veuillez entrez un nombre valide."
+
+bourse:
+  potato:
+    display_name: "Pomme de terre"
+    image_texture: "textures/items/potato"
+    min: 10
+    max: 20

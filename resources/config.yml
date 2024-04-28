@@ -2,6 +2,9 @@ economy:
 # choix entre : "economyapi" ou "bedrockeconomy".
   provider: "economyapi"
 
+# "heures:minutes"
+change-bourse-time: "10:00"
+
 message:
   sell: "Vous venez de vendre x{count} {item} pour ${amount}."
   no_sell: "Tu n'as rien à vendre."
@@ -10,6 +13,7 @@ message:
   edit: "L'item à bien été modifié dans la bourse."
   remove: "L'item à bien été retiré de la bourse."
   add: "L'item à été ajouté dans la bourse."
+  change_bourse: "La bourse vient de changer !"
 
 bourse:
   potato:

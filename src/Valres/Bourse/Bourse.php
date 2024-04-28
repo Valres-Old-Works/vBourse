@@ -11,6 +11,7 @@ use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\exceptions\UnknownProviderExcept
 use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\libPiggyEconomy;
 use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\providers\EconomyProvider;
 use Valres\Bourse\manager\BourseManager;
+use Valres\Bourse\task\ChangeBourseTask;
 
 class Bourse extends PluginBase
 {
@@ -32,6 +33,7 @@ class Bourse extends PluginBase
         $this->bourseManager->loadBourse();
 
         $this->getServer()->getCommandMap()->register("bourse", new BourseCommand($this, "bourse", "Ouvre l'interface de la bourse."));
+        $this->getScheduler()->scheduleRepeatingTask(new ChangeBourseTask(), 20);
     }
 
     protected function onLoad(): void

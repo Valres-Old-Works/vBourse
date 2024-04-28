@@ -27,12 +27,9 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando;
+namespace Valres\Bourse\libs\CortexPE\Commando;
 
 
-use Atom\libs\CortexPE\Commando\exception\HookAlreadyRegistered;
-use Atom\libs\CortexPE\Commando\store\SoftEnumStore;
-use Atom\libs\CortexPE\Commando\traits\IArgumentable;
 use muqsit\simplepackethandler\SimplePacketHandler;
 use pocketmine\command\CommandSender;
 use pocketmine\event\EventPriority;
@@ -45,6 +42,9 @@ use pocketmine\network\mcpe\protocol\types\command\CommandParameter;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 use ReflectionClass;
+use Valres\Bourse\libs\CortexPE\Commando\exception\HookAlreadyRegistered;
+use Valres\Bourse\libs\CortexPE\Commando\store\SoftEnumStore;
+use Valres\Bourse\libs\CortexPE\Commando\traits\IArgumentable;
 
 class PacketHooker implements Listener {
 	/** @var bool */

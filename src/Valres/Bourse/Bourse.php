@@ -2,12 +2,14 @@
 
 namespace Valres\Bourse;
 
-use DaPigGuy\libPiggyEconomy\exceptions\MissingProviderDependencyException;
-use DaPigGuy\libPiggyEconomy\exceptions\UnknownProviderException;
-use DaPigGuy\libPiggyEconomy\libPiggyEconomy;
-use DaPigGuy\libPiggyEconomy\providers\EconomyProvider;
+use JsonException;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
+use Valres\Bourse\command\BourseCommand;
+use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\exceptions\MissingProviderDependencyException;
+use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\exceptions\UnknownProviderException;
+use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\libPiggyEconomy;
+use Valres\Bourse\libs\DaPigGuy\libPiggyEconomy\providers\EconomyProvider;
 use Valres\Bourse\manager\BourseManager;
 
 class Bourse extends PluginBase
@@ -27,6 +29,9 @@ class Bourse extends PluginBase
         libPiggyEconomy::init();
         $this->economy = libPiggyEconomy::getProvider($this->getConfig()->get("economy"));
         $this->bourseManager = new BourseManager();
+        $this->bourseManager->loadBourse();
+
+        $this->getServer()->getCommandMap()->register("bourse", new BourseCommand($this, "bourse", "Ouvre l'interface de la bourse."));
     }
 
     protected function onLoad(): void
@@ -34,8 +39,12 @@ class Bourse extends PluginBase
         self::setInstance($this);
     }
 
+    /**
+     * @return void
+     * @throws JsonException
+     */
     protected function onDisable(): void
     {
-
+        $this->bourseManager->saveBourse();
     }
 }

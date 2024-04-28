@@ -3,6 +3,7 @@
 namespace Valres\Bourse\utils;
 
 use pocketmine\item\Item;
+use pocketmine\item\StringToItemParser;
 use pocketmine\player\Player;
 
 class Utils
@@ -16,5 +17,18 @@ class Utils
             }
         }
         return $amount;
+    }
+
+    /**
+     * @param Player $player
+     * @return array
+     */
+    public static function getAllItemInInvInString(Player $player): array
+    {
+        $items = [];
+        foreach($player->getInventory()->getContents() as $slot => $item_){
+            $items[] = StringToItemParser::getInstance()->lookupAliases($item_)[0];
+        }
+        return $items;
     }
 }

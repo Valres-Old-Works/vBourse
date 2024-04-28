@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Atom\libs\CortexPE\Commando\store;
+namespace Valres\Bourse\libs\CortexPE\Commando\store;
 
 
-use Atom\libs\CortexPE\Commando\exception\CommandoException;
 use pocketmine\network\mcpe\protocol\ClientboundPacket;
 use pocketmine\network\mcpe\protocol\types\command\CommandEnum;
 use pocketmine\network\mcpe\protocol\UpdateSoftEnumPacket;
 use pocketmine\Server;
+use Valres\Bourse\libs\CortexPE\Commando\exception\CommandoException;
 
 class SoftEnumStore {
 	/** @var CommandEnum[] */

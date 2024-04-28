@@ -2,9 +2,9 @@
 
 namespace Valres\Bourse\forms;
 
-use Atom\libs\jojoe77777\FormAPI\SimpleForm;
 use pocketmine\player\Player;
 use Valres\Bourse\Bourse;
+use Valres\Bourse\libs\jojoe77777\FormAPI\SimpleForm;
 
 class BourseForm
 {
@@ -14,7 +14,7 @@ class BourseForm
         $form = new SimpleForm(function(Player $player, int $data = null) use ($bourseManager): void
         {
             if(is_null($data)) return;
-            $bourseItem = $bourseManager->getAllBourse()[$data - 1];
+            $bourseItem = $bourseManager->getAllBourse()[$data];
             SellForm::sendForm($player, $bourseItem);
         });
         $form->setTitle("Bourse");

@@ -27,7 +27,7 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando\exception;
+namespace Valres\Bourse\libs\CortexPE\Commando\exception;
 
 
 class InvalidErrorCode extends CommandoException {

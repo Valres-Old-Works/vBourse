@@ -27,13 +27,9 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando;
+namespace Valres\Bourse\libs\CortexPE\Commando;
 
 
-use Atom\libs\CortexPE\Commando\constraint\BaseConstraint;
-use Atom\libs\CortexPE\Commando\exception\InvalidErrorCode;
-use Atom\libs\CortexPE\Commando\traits\ArgumentableTrait;
-use Atom\libs\CortexPE\Commando\traits\IArgumentable;
 use InvalidArgumentException;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -41,6 +37,10 @@ use pocketmine\lang\Translatable;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
+use Valres\Bourse\libs\CortexPE\Commando\constraint\BaseConstraint;
+use Valres\Bourse\libs\CortexPE\Commando\exception\InvalidErrorCode;
+use Valres\Bourse\libs\CortexPE\Commando\traits\ArgumentableTrait;
+use Valres\Bourse\libs\CortexPE\Commando\traits\IArgumentable;
 use function array_shift;
 use function array_unique;
 use function array_unshift;

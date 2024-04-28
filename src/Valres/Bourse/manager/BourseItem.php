@@ -32,11 +32,27 @@ class BourseItem
     }
 
     /**
+     * @param string $displayName
+     */
+    public function setDisplayName(string $displayName): void
+    {
+        $this->displayName = $displayName;
+    }
+
+    /**
      * @return string
      */
     public function getImageTexture(): string
     {
         return $this->imageTexture;
+    }
+
+    /**
+     * @param string $imageTexture
+     */
+    public function setImageTexture(string $imageTexture): void
+    {
+        $this->imageTexture = $imageTexture;
     }
 
     /**
@@ -48,6 +64,14 @@ class BourseItem
     }
 
     /**
+     * @param int $min
+     */
+    public function setMin(int $min): void
+    {
+        $this->min = $min;
+    }
+
+    /**
      * @return int
      */
     public function getMax(): int
@@ -56,10 +80,26 @@ class BourseItem
     }
 
     /**
+     * @param int $max
+     */
+    public function setMax(int $max): void
+    {
+        $this->max = $max;
+    }
+
+    /**
      * @return int
      */
     public function getActual(): int
     {
         return $this->actual;
+    }
+
+    /**
+     * @param int $actual
+     */
+    public function setActual(int $actual): void
+    {
+        $this->actual = $actual;
     }
 }

@@ -27,10 +27,10 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando;
+namespace Valres\Bourse\libs\CortexPE\Commando;
 
 
-use Atom\libs\CortexPE\Commando\constraint\BaseConstraint;
+use Valres\Bourse\libs\CortexPE\Commando\constraint\BaseConstraint;
 
 /**
  * Interface IRunnable

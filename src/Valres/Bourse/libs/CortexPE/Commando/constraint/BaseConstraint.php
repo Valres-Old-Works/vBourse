@@ -27,11 +27,11 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando\constraint;
+namespace Valres\Bourse\libs\CortexPE\Commando\constraint;
 
 
-use Atom\libs\CortexPE\Commando\IRunnable;
 use pocketmine\command\CommandSender;
+use Valres\Bourse\libs\CortexPE\Commando\IRunnable;
 
 abstract class BaseConstraint {
     /** @var IRunnable */

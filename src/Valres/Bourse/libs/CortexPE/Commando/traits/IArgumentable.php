@@ -27,11 +27,11 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando\traits;
+namespace Valres\Bourse\libs\CortexPE\Commando\traits;
 
 
-use Atom\libs\CortexPE\Commando\args\BaseArgument;
 use pocketmine\command\CommandSender;
+use Valres\Bourse\libs\CortexPE\Commando\args\BaseArgument;
 
 interface IArgumentable {
 	public function generateUsageMessage(): string;

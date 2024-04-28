@@ -27,7 +27,7 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando\constraint;
+namespace Valres\Bourse\libs\CortexPE\Commando\constraint;
 
 
 use pocketmine\command\CommandSender;

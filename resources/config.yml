@@ -1,8 +1,15 @@
-economy: "economyapi"
+economy:
+# choix entre : "economyapi" ou "bedrockeconomy".
+  provider: "economyapi"
 
 message:
   sell: "Vous venez de vendre x{count} {item} pour ${amount}."
+  no_sell: "Tu n'as rien à vendre."
   not_numeric: "Veuillez entrez un nombre valide."
+  higher_error: "Le minimum doit être inferieur au maximum."
+  edit: "L'item à bien été modifié dans la bourse."
+  remove: "L'item à bien été retiré de la bourse."
+  add: "L'item à été ajouté dans la bourse."
 
 bourse:
   potato:

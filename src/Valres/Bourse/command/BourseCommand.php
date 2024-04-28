@@ -2,10 +2,12 @@
 
 namespace Valres\Bourse\command;
 
-use Atom\libs\CortexPE\Commando\BaseCommand;
 use pocketmine\command\CommandSender;
 use pocketmine\permission\DefaultPermissions;
+use pocketmine\player\Player;
 use Valres\Bourse\command\subcommand\EditBourseCommand;
+use Valres\Bourse\forms\BourseForm;
+use Valres\Bourse\libs\CortexPE\Commando\BaseCommand;
 
 class BourseCommand extends BaseCommand
 {
@@ -17,7 +19,8 @@ class BourseCommand extends BaseCommand
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
-
+        if(!$sender instanceof Player) return;
+        BourseForm::sendForm($sender);
     }
 
     public function getPermission() {}

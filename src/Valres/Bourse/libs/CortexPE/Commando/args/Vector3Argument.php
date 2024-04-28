@@ -27,7 +27,7 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando\args;
+namespace Valres\Bourse\libs\CortexPE\Commando\args;
 
 
 use pocketmine\command\CommandSender;

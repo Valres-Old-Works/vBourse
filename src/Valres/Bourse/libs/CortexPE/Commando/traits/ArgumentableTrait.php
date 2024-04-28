@@ -27,14 +27,14 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando\traits;
+namespace Valres\Bourse\libs\CortexPE\Commando\traits;
 
 
-use Atom\libs\CortexPE\Commando\args\BaseArgument;
-use Atom\libs\CortexPE\Commando\args\TextArgument;
-use Atom\libs\CortexPE\Commando\BaseCommand;
-use Atom\libs\CortexPE\Commando\exception\ArgumentOrderException;
 use pocketmine\command\CommandSender;
+use Valres\Bourse\libs\CortexPE\Commando\args\BaseArgument;
+use Valres\Bourse\libs\CortexPE\Commando\args\TextArgument;
+use Valres\Bourse\libs\CortexPE\Commando\BaseCommand;
+use Valres\Bourse\libs\CortexPE\Commando\exception\ArgumentOrderException;
 use function array_slice;
 use function count;
 use function implode;

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Atom\libs\jojoe77777\FormAPI;
+namespace Valres\Bourse\libs\jojoe77777\FormAPI;
 
 use InvalidArgumentException;
 use pocketmine\form\Form as IForm;

@@ -2,9 +2,9 @@
 
 namespace Valres\Bourse\forms;
 
-use Atom\libs\jojoe77777\FormAPI\CustomForm;
 use pocketmine\player\Player;
 use Valres\Bourse\Bourse;
+use Valres\Bourse\libs\jojoe77777\FormAPI\CustomForm;
 use Valres\Bourse\manager\BourseItem;
 use Valres\Bourse\utils\Utils;
 
@@ -27,6 +27,11 @@ class SellForm
 
                 $amount = intval($data[1]);
                 $player->getInventory()->removeItem($bourseItem->getItem()->setCount($data[1]));
+            }
+
+            if($amount <= 0){
+                $player->sendMessage(Bourse::getInstance()->getConfig()->get("message")["no_sell"]);
+                return;
             }
 
             $total = $amount * $bourseItem->getActual();

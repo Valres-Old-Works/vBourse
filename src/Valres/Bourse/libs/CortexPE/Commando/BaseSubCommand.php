@@ -27,14 +27,14 @@
  */
 declare(strict_types=1);
 
-namespace Atom\libs\CortexPE\Commando;
+namespace Valres\Bourse\libs\CortexPE\Commando;
 
 
-use Atom\libs\CortexPE\Commando\constraint\BaseConstraint;
-use Atom\libs\CortexPE\Commando\traits\ArgumentableTrait;
-use Atom\libs\CortexPE\Commando\traits\IArgumentable;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\Plugin;
+use Valres\Bourse\libs\CortexPE\Commando\constraint\BaseConstraint;
+use Valres\Bourse\libs\CortexPE\Commando\traits\ArgumentableTrait;
+use Valres\Bourse\libs\CortexPE\Commando\traits\IArgumentable;
 use function explode;
 
 abstract class BaseSubCommand implements IArgumentable, IRunnable {
